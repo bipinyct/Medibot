@@ -5,8 +5,11 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.chains import RetrievalQA
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import PromptTemplate
-from langchain_huggingface import HuggingFaceEndpoint
+from langchain_community.llms import HuggingFaceEndpoint
 from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+load_dotenv()  # ✅ Load .env vars into os.environ
+
 
 # Set FAISS vectorstore path
 DB_FAISS_PATH = "vectorstore/db_faiss"
